@@ -20,18 +20,18 @@
         <h1 style="background-color: blue; padding: 5px; color: white; text-align: center;">Invisible Fence Contract Calculator</h1>
         <div class="row">
             <div class="column">
-                <h3>Wanted Features</h3>
+                <h2 style="text-align: center;">Wanted Features</h2>
                 <form style="text-align: center; align-content: center;">
                     <input id="drivewayCB" type="checkbox" onclick="drivewayFunc()">Driveway Crossings <br>
                     <label id="drivewayFeet" style="display: none;"><br>Number of Feet</label><input onblur="drivewayCost()" id="driveway"type="number" style="margin: auto; display: none;"> <br>
                     <input id="sidewalkCB" type="checkbox" onclick="sidewalkFunc()">Sidewalk Crossings <br>
-                    <label id="swNumber" style="display: none;"><br>Number of Sidewalks</label><input id="sidewalk" type="number" style="margin: auto; display: none;"> <br> 
+                    <label id="swNumber" style="display: none;"><br>Number of Sidewalks</label><input onblur="sidewalkCost()" id="sidewalk" type="number" style="margin: auto; display: none;"> <br> 
                     <input id="diggingCB" type="checkbox" onclick="diggingFunc()">Hand Digging <br>
-                    <label id="diggingFeet" style="display: none;"><br>Number of Feet</label><input id="dig" type="number" style="margin: auto; display: none;"> <br>
+                    <label id="diggingFeet" style="display: none;"><br>Number of Feet</label><input onblur="diggingCost()" id="dig" type="number" style="margin: auto; display: none;"> <br>
                     <input id="wireCB" type="checkbox" onclick="wireFunc()">Wire (Machine, Labor, Wire) <br>
-                    <label id="wireFeet" style="display: none;"><br>Number of Feet</label><input id="wire" type="number" style="margin: auto; display: none;"> <br>
+                    <label id="wireFeet" style="display: none;"><br>Number of Feet</label><input onblur="wireCost()" id="wire" type="number" style="margin: auto; display: none;"> <br>
                     <input id="pinnedWireCB" type="checkbox" onclick="pinnedWireFunc()">Pinned Wire Installed <br>
-                    <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
+                    <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input onblur="pinnedWireCost()" id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
                     <input type="checkbox">Indoor Shields Plus <br>
                     <input type="checkbox">Outdoor Shields Plus <br>
                     <input type="checkbox">Indoor Shields Gate <br>
@@ -51,16 +51,18 @@
 
                 </form>
             </div>
-            <div class="column">
-                <h3>Cost</h3>
+            <div class="column" style="text-align: center;">
+                <div style="display: inline-block">
+                    <h2 style="text-align: center;">Cost</h2>         
+                    <div style="padding: 100px; border: 2px solid blue; text-align: center; ">
+                        <h4>Calculated Subtotal:</h4>
+                        <h2 id="totalCost"></h2>
+                </div>
+            </div>
             </div>
         </div>
         <div style="text-align: center;">
-            <div style="width: 30%; height: 20%; border: 2px solid blue; text-align: center; display: inline-block">
-                <h3>Calculated Subtotal:</h3>
-                <h2>$100</h2>
-
-            </div>
+ 
         </div>
         
         <script>
@@ -113,41 +115,33 @@
                 var driveway = document.getElementById("driveway").value;
                 driveway *= 3.5;
                 totalCost += driveway;
+                document.getElementById("totalCost").innerHTML = totalCost;
             }        
             function sidewalkCost() {
                 var sidewalk = document.getElementById("sidewalk").value;
                 sidewalk *= 25;
                 totalCost += sidewalk;
+                document.getElementById("totalCost").innerHTML = totalCost;
             }
             function diggingCost() {
-                var digging = document.getElementById("digging").value;
-                digging *= 1.25;
-                totalCost += digging;
+                var dig = document.getElementById("dig").value;
+                dig *= 1.25;
+                totalCost += dig;
+                document.getElementById("totalCost").innerHTML = totalCost;
             }
             function wireCost() {
                 var wire = document.getElementById("wire").value;
                 wire *= .7;
                 totalCost += wire;
+                document.getElementById("totalCost").innerHTML = totalCost;
             }
             function pinnedWireCost() {
-                var sidewalk = document.getElementById("pinnedWire").value;
+                var pinnedWire = document.getElementById("pinnedWire").value;
                 pinnedWire *= 25;
                 totalCost += pinnedWire;
+                document.getElementById("totalCost").innerHTML = totalCost;
             }
-    
-            function displayTotal() {
-    
-            } 
-    
-            function driveway(){
-                alert("got it");
-                var drivewayCB = document.getElementById("drivewayCB");
-                var drivewayfeet = document.getElementById("drivewayfeet");
-                var driveway = document.getElementById("driveway");
 
-                drivewayfeet.style.display = drivewayCB.checked ? "block" : "none";
-                driveway.style.display = drivewayCB.checked ? "block" : "none";
-             }
-            </script> -->
+        </script>
     </body>
 </html>
