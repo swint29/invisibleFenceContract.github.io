@@ -3,38 +3,62 @@
 <html>
     <head>
         <title>Invisible Fence Contract Calculator</title>
+        <style>
+            /* Create two equal columns that floats next to each other */
+            .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+        </style>
     </head>
     <body>
         <h1 style="background-color: blue; padding: 5px; color: white; text-align: center;">Invisible Fence Contract Calculator</h1>
-        <form style="text-align: center;">
-            <input id="drivewayCB" type="checkbox" onclick="driveway()">Driveway Crossings</input> <br>
-            <label id="drivewayfeet">Number of Feet</label><input id="driveway"type="number"> <br>
-            <input type="checkbox">Sidewalk Crossings</input> <br>
-            <label>Number of Sidewalks</label><input id="sidewalk" type="number"> <br> 
-            <input type="checkbox">Hand Digging</input> <br>
-            <label>Number of Feet</label><input id="dig" type="number"> <br>
-            <input type="checkbox">Wire (Machine, Labor, Wire)</input> <br>
-            <label>Number of Feet</label><input id="wire" type="number"> <br>
-            <input type="checkbox">Pinned Wire Installed</input> <br>
-            <label>Number of Feet</label><input id="pinnedWire" type="number"> <br>
-            <input type="checkbox">Indoor Shields Plus</input> <br>
-            <input type="checkbox">Outdoor Shields Plus</input> <br>
-            <input type="checkbox">Indoor Shields Gate</input> <br>
-            <input type="checkbox">Micro Shields Unit</input> <br>
-            <input type="checkbox">Dual Loop Control Panel Upgrade</input> <br>
-            <input type="checkbox">Battery Back-Up System Installed</input> <br>
-            <input type="checkbox">MircoLite Plus Computer Collar</input> <br>
-            <input type="checkbox">Shields Computer Collar</input> <br>
-            <input type="checkbox">Power Cap PLan - One Year</input> <br>
-            <input type="checkbox">Single Training Sesson</input> <br>
-            <input type="checkbox">Boundary Plus Add-A-Pet Package</input> <br>
-            <input type="checkbox">GPS Add-A-Pet Package</input> <br>
-            <input type="checkbox">Winter Installation Fee</input> <br>
-            <input type="checkbox">Doorman</input> <br>
-            <input type="checkbox">Labor Add Ons</input> <br>
+        <div class="row">
+            <div class="column">
+                <h3>Wanted Features</h3>
+                <form style="text-align: center;">
+                    <input id="drivewayCB" type="checkbox" onclick="driveway()">Driveway Crossings</input> <br>
+                    <label id="drivewayfeet">Number of Feet</label><input id="driveway"type="number"> <br>
+                    <input type="checkbox">Sidewalk Crossings</input> <br>
+                    <label>Number of Sidewalks</label><input id="sidewalk" type="number"> <br> 
+                    <input type="checkbox">Hand Digging</input> <br>
+                    <label>Number of Feet</label><input id="dig" type="number"> <br>
+                    <input type="checkbox">Wire (Machine, Labor, Wire)</input> <br>
+                    <label>Number of Feet</label><input id="wire" type="number"> <br>
+                    <input type="checkbox">Pinned Wire Installed</input> <br>
+                    <label>Number of Feet</label><input id="pinnedWire" type="number"> <br>
+                    <input type="checkbox">Indoor Shields Plus</input> <br>
+                    <input type="checkbox">Outdoor Shields Plus</input> <br>
+                    <input type="checkbox">Indoor Shields Gate</input> <br>
+                    <input type="checkbox">Micro Shields Unit</input> <br>
+                    <input type="checkbox">Dual Loop Control Panel Upgrade</input> <br>
+                    <input type="checkbox">Battery Back-Up System Installed</input> <br>
+                    <input type="checkbox">MircoLite Plus Computer Collar</input> <br>
+                    <input type="checkbox">Shields Computer Collar</input> <br>
+                    <input type="checkbox">Power Cap PLan - One Year</input> <br>
+                    <input type="checkbox">Single Training Sesson</input> <br>
+                    <input type="checkbox">Boundary Plus Add-A-Pet Package</input> <br>
+                    <input type="checkbox">GPS Add-A-Pet Package</input> <br>
+                    <input type="checkbox">Winter Installation Fee</input> <br>
+                    <input type="checkbox">Doorman</input> <br>
+                    <input type="checkbox">Labor Add Ons</input> <br>
 
 
-        </form>
+                </form>
+            </div>
+            <div class="column">
+                <h3>Cost</h3>
+            </div>
+        </div>
         <div style="text-align: center;">
             <div style="width: 30%; height: 20%; border: 2px solid blue; text-align: center; display: inline-block">
                 <h3>Calculated Subtotal:</h3>
