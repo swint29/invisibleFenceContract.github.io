@@ -4,19 +4,15 @@
     <head>
         <title>Invisible Fence Contract Calculator</title>
         <style>
-            /* Create two equal columns that floats next to each other */
-            .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            height: 300px; /* Should be removed. Only for demonstration */
+            .row {
+            display: flex;
             }
 
-            /* Clear floats after the columns */
-            .row:after {
-            content: "";
-            display: table;
-            clear: both;
+            /* Create two equal columns that sits next to each other */
+            .column {
+            flex: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
             }
         </style>
     </head>
@@ -62,7 +58,6 @@
         <div style="text-align: center;">
             <div style="width: 30%; height: 20%; border: 2px solid blue; text-align: center; display: inline-block">
                 <h3>Calculated Subtotal:</h3>
-                <button on
                 <h2>$100</h2>
 
             </div>
