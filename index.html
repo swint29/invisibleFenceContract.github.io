@@ -33,20 +33,20 @@
                     <input id="pinnedWireCB" type="checkbox" onclick="pinnedWireFunc()">Pinned Wire Installed <br>
                     <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input onblur="pinnedWireCost()" id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
                     <input id="indoorSP"type="checkbox" onclick="indoorSPCost()">Indoor Shields Plus <br>
-                    <input id="" type="checkbox">Outdoor Shields Plus <br>
-                    <input type="checkbox">Indoor Shields Gate <br>
-                    <input type="checkbox">Micro Shields Unit <br>
-                    <input type="checkbox">Dual Loop Control Panel Upgrade <br>
-                    <input type="checkbox">Battery Back-Up System Installed <br>
-                    <input type="checkbox">MircoLite Plus Computer Collar <br>
-                    <input type="checkbox">Shields Computer Collar <br>
-                    <input type="checkbox">Power Cap PLan - One Year <br>
-                    <input type="checkbox">Single Training Sesson <br>
-                    <input type="checkbox">Boundary Plus Add-A-Pet Package <br>
-                    <input type="checkbox">GPS Add-A-Pet Package <br>
-                    <input type="checkbox">Winter Installation Fee <br>
-                    <input type="checkbox">Doorman<br>
-                    <input type="checkbox">Labor Add Ons<br>
+                    <input id="outdoorSP" type="checkbox" onclick="outdoorSPCost()">Outdoor Shields Plus <br>
+                    <input id="indoorSG" type="checkbox" onclick="indoorSGCost()">Indoor Shields Gate <br>
+                    <input id="microSU" type="checkbox" onclick="microSUCost()">Micro Shields Unit <br>
+                    <input id="dual" type="checkbox" onclick="dualCost()">Dual Loop Control Panel Upgrade <br>
+                    <input id="battery" type="checkbox" onclick="batterCost()">Battery Back-Up System Installed <br>
+                    <input id="microPC" type="checkbox" onclick="microPCCost()">MircoLite Plus Computer Collar <br>
+                    <input id="shields" type="checkbox" onclick="shieldsCost()">Shields Computer Collar <br>
+                    <input id="power" type="checkbox" onclick="powerCost()">Power Cap PLan - One Year <br>
+                    <input id="single" type="checkbox" onclick="singleCost()">Single Training Sesson <br>
+                    <input id="boundary" type="checkbox" onclick="boundaryCost()">Boundary Plus Add-A-Pet Package <br>
+                    <input id="gps" type="checkbox" onclick="gpsCost()">GPS Add-A-Pet Package <br>
+                    <input id="winter" type="checkbox" onclick="winterCost()">Winter Installation Fee <br>
+                    <input id="doorman" type="checkbox" onclick="doormanCost()">Doorman<br>
+                    <input id="labor" type="checkbox" onclick="laborCost()">Labor Add Ons<br>
 
 
                 </form>
@@ -149,6 +149,90 @@
                 document.getElementById("totalCost").innerHTML = totalCost;
             }
 
+            function outdoorSPCost(){
+                var outdoorSP = document.getElementById("outdoorSP");
+
+                outdoorSP.checked ? totalCost+=209 : totalCost-=209;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }            
+            function indoorSGCost(){
+                var indoorSG = document.getElementById("indoorSG");
+
+                indoorSG.checked ? totalCost+=279 : totalCost-=279;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function microSUCost(){
+                var microSU = document.getElementById("microSU");
+
+                microSU.checked ? totalCost+=129 : totalCost-=129;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function dualCost(){
+                var dual = document.getElementById("dual");
+
+                dual.checked ? totalCost+=129 : totalCost-=129;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function batteryCost(){
+                var battery = document.getElementById("battery");
+
+                battery.checked ? totalCost+=129 : totalCost-=129;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function microPCCost(){
+                var microPC = document.getElementById("microPC");
+
+                microPC.checked ? totalCost+=399 : totalCost-=399;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }function shieldsCost(){
+                var shields = document.getElementById("shields");
+
+                shields.checked ? totalCost+=189 : totalCost-=189;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function powerCost(){
+                var power = document.getElementById("power");
+
+                power.checked ? totalCost+=74.95 : totalCost-=74.95;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function singleCost(){
+                var single = document.getElementById("single");
+
+                single.checked ? totalCost+=129 : totalCost-=129;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function boundaryCost(){
+                var boundary = document.getElementById("boundary");
+
+                boundary.checked ? totalCost+=599 : totalCost-=599;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function gpsCost(){
+                var indoorSP = document.getElementById("gps");
+
+                gps.checked ? totalCost+=799 : totalCost-=799;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function winterCost(){
+                var winter = document.getElementById("winter");
+
+                winter.checked ? totalCost+=99 : totalCost-=99;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function doormanCost(){
+                var doorman = document.getElementById("doorman");
+
+                doorman.checked ? totalCost+=699 : totalCost-=699;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+            function laborCost(){
+                var labor = document.getElementById("labor");
+
+                indoorSP.checked ? totalCost+= 0: totalCost-= 0;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+        
         </script>
     </body>
 </html>
