@@ -13,6 +13,7 @@
                 flex: 50%;
                 padding: 10px;
             }
+
         </style>
     </head>
     <body>
@@ -20,32 +21,32 @@
         <div class="row">
             <div class="column">
                 <h3>Wanted Features</h3>
-                <form style="text-align: center;">
-                    <input id="drivewayCB" type="checkbox" onclick="driveway()">Driveway Crossings</input> <br>
-                    <label id="drivewayfeet" style="display: none;">Number of Feet</label><input id="driveway"type="number" style="display: none;"> <br>
-                    <input type="checkbox">Sidewalk Crossings</input> <br>
-                    <label>Number of Sidewalks</label><input id="sidewalk" type="number"> <br> 
-                    <input type="checkbox">Hand Digging</input> <br>
-                    <label>Number of Feet</label><input id="dig" type="number"> <br>
-                    <input type="checkbox">Wire (Machine, Labor, Wire)</input> <br>
-                    <label>Number of Feet</label><input id="wire" type="number"> <br>
-                    <input type="checkbox">Pinned Wire Installed</input> <br>
-                    <label>Number of Feet</label><input id="pinnedWire" type="number"> <br>
-                    <input type="checkbox">Indoor Shields Plus</input> <br>
-                    <input type="checkbox">Outdoor Shields Plus</input> <br>
-                    <input type="checkbox">Indoor Shields Gate</input> <br>
-                    <input type="checkbox">Micro Shields Unit</input> <br>
-                    <input type="checkbox">Dual Loop Control Panel Upgrade</input> <br>
-                    <input type="checkbox">Battery Back-Up System Installed</input> <br>
-                    <input type="checkbox">MircoLite Plus Computer Collar</input> <br>
-                    <input type="checkbox">Shields Computer Collar</input> <br>
-                    <input type="checkbox">Power Cap PLan - One Year</input> <br>
-                    <input type="checkbox">Single Training Sesson</input> <br>
-                    <input type="checkbox">Boundary Plus Add-A-Pet Package</input> <br>
-                    <input type="checkbox">GPS Add-A-Pet Package</input> <br>
-                    <input type="checkbox">Winter Installation Fee</input> <br>
-                    <input type="checkbox">Doorman</input> <br>
-                    <input type="checkbox">Labor Add Ons</input> <br>
+                <form style="text-align: center; align-content: center;">
+                    <input id="drivewayCB" type="checkbox" onclick="drivewayFunc()">Driveway Crossings <br>
+                    <label id="drivewayFeet" style="display: none;"><br>Number of Feet</label><input id="driveway"type="number" style="margin: auto; display: none;"> <br>
+                    <input id="sidewalkCB" type="checkbox" onclick="sidewalkFunc()">Sidewalk Crossings <br>
+                    <label id="swNumber" style="display: none;"><br>Number of Sidewalks</label><input id="sidewalk" type="number" style="margin: auto; display: none;"> <br> 
+                    <input id="diggingCB" type="checkbox" onclick="diggingFunc()">Hand Digging <br>
+                    <label id="diggingFeet" style="display: none;"><br>Number of Feet</label><input id="dig" type="number" style="margin: auto; display: none;"> <br>
+                    <input id="wireCB" type="checkbox" onclick="wireFunc()">Wire (Machine, Labor, Wire) <br>
+                    <label id="wireFeet" style="display: none;"><br>Number of Feet</label><input id="wire" type="number" style="margin: auto; display: none;"> <br>
+                    <input id="pinnedWireCB" type="checkbox" onclick="pinnedWireFunc()">Pinned Wire Installed <br>
+                    <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
+                    <input type="checkbox">Indoor Shields Plus <br>
+                    <input type="checkbox">Outdoor Shields Plus <br>
+                    <input type="checkbox">Indoor Shields Gate <br>
+                    <input type="checkbox">Micro Shields Unit <br>
+                    <input type="checkbox">Dual Loop Control Panel Upgrade <br>
+                    <input type="checkbox">Battery Back-Up System Installed <br>
+                    <input type="checkbox">MircoLite Plus Computer Collar <br>
+                    <input type="checkbox">Shields Computer Collar <br>
+                    <input type="checkbox">Power Cap PLan - One Year <br>
+                    <input type="checkbox">Single Training Sesson <br>
+                    <input type="checkbox">Boundary Plus Add-A-Pet Package <br>
+                    <input type="checkbox">GPS Add-A-Pet Package <br>
+                    <input type="checkbox">Winter Installation Fee <br>
+                    <input type="checkbox">Doorman<br>
+                    <input type="checkbox">Labor Add Ons<br>
 
 
                 </form>
@@ -61,48 +62,90 @@
 
             </div>
         </div>
+        
+        <script>
+
+            function drivewayFunc() {
+                var drivewayCB = document.getElementById("drivewayCB");
+                var drivewayFeet = document.getElementById("drivewayFeet");
+                var driveway = document.getElementById("driveway");
+
+                drivewayFeet.style.display = drivewayCB.checked ? "block" : "none";
+                driveway.style.display = drivewayCB.checked ? "block" : "none";
+            }
+            function sidewalkFunc() {
+                var sidewalkCB = document.getElementById("sidewalkCB");
+                var swNumber = document.getElementById("swNumber");
+                var sidewalk = document.getElementById("sidewalk");
+
+                swNumber.style.display = sidewalkCB.checked ? "block" : "none";
+                sidewalk.style.display = sidewalkCB.checked ? "block" : "none";
+            }
+            function diggingFunc() {
+                var diggingCB = document.getElementById("diggingCB");
+                var diggingFeet = document.getElementById("diggingFeet");
+                var dig = document.getElementById("dig");
+
+                diggingFeet.style.display = diggingCB.checked ? "block" : "none";
+                dig.style.display = diggingCB.checked ? "block" : "none";
+            }
+            function wireFunc() {
+                var wireCB = document.getElementById("wireCB");
+                var wireFeet = document.getElementById("wireFeet");
+                var wire = document.getElementById("wire");
+
+                wireFeet.style.display = wireCB.checked ? "block" : "none";
+                wire.style.display = wireCB.checked ? "block" : "none";
+            }
+            function pinnedWireFunc() {
+                var pinnedWireCB = document.getElementById("pinnedWireCB");
+                var pinnedWireFeet = document.getElementById("pinnedWireFeet");
+                var pinnedWire = document.getElementById("pinnedWire");
+
+                pinnedWireFeet.style.display = pinnedWireCB.checked ? "block" : "none";
+                pinnedWire.style.display = pinnedWireCB.checked ? "block" : "none";
+            }
+
+            var totalCost = 0;
+            function drivewayCost() {
+                var driveway = document.getElementById("driveway").value;
+                driveway *= 3.5;
+                totalCost += driveway;
+            }        
+            function sidewalkCost() {
+                var sidewalk = document.getElementById("sidewalk").value;
+                sidewalk *= 25;
+                totalCost += sidewalk;
+            }
+            function diggingCost() {
+                var digging = document.getElementById("digging").value;
+                digging *= 1.25;
+                totalCost += digging;
+            }
+            function wireCost() {
+                var wire = document.getElementById("wire").value;
+                wire *= .7;
+                totalCost += wire;
+            }
+            function pinnedWireCost() {
+                var sidewalk = document.getElementById("pinnedWire").value;
+                pinnedWire *= 25;
+                totalCost += pinnedWire;
+            }
+    
+            function displayTotal() {
+    
+            } 
+    
+            function driveway(){
+                alert("got it");
+                var drivewayCB = document.getElementById("drivewayCB");
+                var drivewayfeet = document.getElementById("drivewayfeet");
+                var driveway = document.getElementById("driveway");
+
+                drivewayfeet.style.display = drivewayCB.checked ? "block" : "none";
+                driveway.style.display = drivewayCB.checked ? "block" : "none";
+             }
+            </script> -->
     </body>
-    <script>
-
-        var totalCost = 0;
-        function drivewayCost() {
-            var driveway = document.getElementById("driveway").value;
-            driveway *= 3.5;
-            totalCost += driveway;
-        }        
-        function sidewalkCost() {
-            var sidewalk = document.getElementById("sidewalk").value;
-            sidewalk *= 25;
-            totalCost += sidewalk;
-        }
-        function diggingCost() {
-            var digging = document.getElementById("digging").value;
-            digging *= 1.25;
-            totalCost += digging;
-        }
-        function wireCost() {
-            var wire = document.getElementById("wire").value;
-            wire *= .7;
-            totalCost += wire;
-        }
-        function pinnedWireCost() {
-            var sidewalk = document.getElementById("pinnedWire").value;
-            pinnedWire *= 25;
-            totalCost += pinnedWire;
-        }
-
-        function displayTotal() {
-
-        } 
-
-        function driveway(){
-            var drivewayCB = document.getElementById("drivewayCB");
-            var drivewayfeet = document.getElementById("drivewayfeet");
-            var driveway = document.getElementById("driveway");
-
-            drivewayfeet.style.display = drivewayCB.checked ? "block" : "none";
-            driveway.style.display = drivewayCB.checked ? "block" : "none";
-        }
-
-        </script>
 </html>
