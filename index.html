@@ -23,7 +23,7 @@
                 <h3>Wanted Features</h3>
                 <form style="text-align: center; align-content: center;">
                     <input id="drivewayCB" type="checkbox" onclick="drivewayFunc()">Driveway Crossings <br>
-                    <label id="drivewayFeet" style="display: none;"><br>Number of Feet</label><input id="driveway"type="number" style="margin: auto; display: none;"> <br>
+                    <label id="drivewayFeet" style="display: none;"><br>Number of Feet</label><input onblur="drivewayCost()" id="driveway"type="number" style="margin: auto; display: none;"> <br>
                     <input id="sidewalkCB" type="checkbox" onclick="sidewalkFunc()">Sidewalk Crossings <br>
                     <label id="swNumber" style="display: none;"><br>Number of Sidewalks</label><input id="sidewalk" type="number" style="margin: auto; display: none;"> <br> 
                     <input id="diggingCB" type="checkbox" onclick="diggingFunc()">Hand Digging <br>
@@ -106,7 +106,9 @@
                 pinnedWire.style.display = pinnedWireCB.checked ? "block" : "none";
             }
 
+
             var totalCost = 0;
+
             function drivewayCost() {
                 var driveway = document.getElementById("driveway").value;
                 driveway *= 3.5;
