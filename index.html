@@ -7,16 +7,16 @@
     <body>
         <h1 style="background-color: blue; padding: 5px; color: white; text-align: center;">Invisible Fence Contract Calculator</h1>
         <form style="text-align: center;">
-            <input type="checkbox">Driveway Crossings</input> <br>
-            <label>Number of Feet</label><input type="number"> <br>
+            <input id="drivewayCB" type="checkbox" onclick="driveway()">Driveway Crossings</input> <br>
+            <label id="drivewayfeet">Number of Feet</label><input id="driveway"type="number"> <br>
             <input type="checkbox">Sidewalk Crossings</input> <br>
-            <label>Number of Sidewalks</label><input type="number"> <br> 
+            <label>Number of Sidewalks</label><input id="sidewalk" type="number"> <br> 
             <input type="checkbox">Hand Digging</input> <br>
-            <label>Number of Feet</label><input type="number"> <br>
-            <input type="checkbox">Wire (Machin, Labor, Wire)</input> <br>
-            <label>Number of Feet</label><input type="number"> <br>
+            <label>Number of Feet</label><input id="dig" type="number"> <br>
+            <input type="checkbox">Wire (Machine, Labor, Wire)</input> <br>
+            <label>Number of Feet</label><input id="wire" type="number"> <br>
             <input type="checkbox">Pinned Wire Installed</input> <br>
-            <label>Number of Feet</label><input type="number"> <br>
+            <label>Number of Feet</label><input id="pinnedWire" type="number"> <br>
             <input type="checkbox">Indoor Shields Plus</input> <br>
             <input type="checkbox">Outdoor Shields Plus</input> <br>
             <input type="checkbox">Indoor Shields Gate</input> <br>
@@ -38,9 +38,53 @@
         <div style="text-align: center;">
             <div style="width: 30%; height: 20%; border: 2px solid blue; text-align: center; display: inline-block">
                 <h3>Calculated Subtotal:</h3>
+                <button on
                 <h2>$100</h2>
 
             </div>
         </div>
     </body>
+    <script>
+
+        var totalCost = 0;
+        function drivewayCost() {
+            var driveway = document.getElementById("driveway").value;
+            driveway *= 3.5;
+            totalCost += driveway;
+        }        
+        function sidewalkCost() {
+            var sidewalk = document.getElementById("sidewalk").value;
+            sidewalk *= 25;
+            totalCost += sidewalk;
+        }
+        function diggingCost() {
+            var digging = document.getElementById("digging").value;
+            digging *= 1.25;
+            totalCost += digging;
+        }
+        function wireCost() {
+            var wire = document.getElementById("wire").value;
+            wire *= .7;
+            totalCost += wire;
+        }
+        function pinnedWireCost() {
+            var sidewalk = document.getElementById("pinnedWire").value;
+            pinnedWire *= 25;
+            totalCost += pinnedWire;
+        }
+
+        function displayTotal() {
+
+        } 
+
+        function driveway(){
+            var drivewayCB = document.getElementById("drivewayCB");
+            var drivewayfeet = document.getElementById("drivewayfeet");
+            var driveway = document.getElementById("driveway");
+
+            drivewayfeet.style.display = drivewayCB.checked ? "block" : "none";
+            driveway.style.display = drivewayCB.checked ? "block" : "none";
+        }
+
+        </script>
 </html>
