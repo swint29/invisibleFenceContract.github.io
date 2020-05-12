@@ -32,8 +32,8 @@
                     <label id="wireFeet" style="display: none;"><br>Number of Feet</label><input onblur="wireCost()" id="wire" type="number" style="margin: auto; display: none;"> <br>
                     <input id="pinnedWireCB" type="checkbox" onclick="pinnedWireFunc()">Pinned Wire Installed <br>
                     <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input onblur="pinnedWireCost()" id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
-                    <input type="checkbox">Indoor Shields Plus <br>
-                    <input type="checkbox">Outdoor Shields Plus <br>
+                    <input id="indoorSP"type="checkbox" onclick="indoorSPCost()">Indoor Shields Plus <br>
+                    <input id="" type="checkbox">Outdoor Shields Plus <br>
                     <input type="checkbox">Indoor Shields Gate <br>
                     <input type="checkbox">Micro Shields Unit <br>
                     <input type="checkbox">Dual Loop Control Panel Upgrade <br>
@@ -139,6 +139,13 @@
                 var pinnedWire = document.getElementById("pinnedWire").value;
                 pinnedWire *= 25;
                 totalCost += pinnedWire;
+                document.getElementById("totalCost").innerHTML = totalCost;
+            }
+
+            function indoorSPCost(){
+                var indoorSP = document.getElementById("indoorSP");
+
+                indoorSP.checked ? totalCost+= 189 : totalCost-=189;
                 document.getElementById("totalCost").innerHTML = totalCost;
             }
 
