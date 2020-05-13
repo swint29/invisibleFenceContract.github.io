@@ -5,6 +5,16 @@ function drivewayFunc() {
 
     drivewayFeet.style.display = drivewayCB.checked ? "block" : "none";
     driveway.style.display = drivewayCB.checked ? "block" : "none";
+
+    if(!drivewayCB.checked){
+
+        document.getElementById("drivewayCart").remove();
+        var totCost = document.getElementById("totalCost").innerHTML;
+        var drivewayCost = document.getElementById("driveway").value * 3.5;
+        totCost -= drivewayCost;
+        
+        document.getElementById("totalCost").innerHTML = totCost;
+    }
 }
 function sidewalkFunc() {
     var sidewalkCB = document.getElementById("sidewalkCB");

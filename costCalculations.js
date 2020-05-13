@@ -1,11 +1,43 @@
 var totalCost = 0;
+var tempCost = 0;
 
 function drivewayCost() {
     var driveway = document.getElementById("driveway").value;
+    var totCost = document.getElementById("totalCost").innerHTML;
+    var drivewayCart = document.getElementById("drivewayCart").innerHTML;
+
     driveway *= 3.5;
-    totalCost += driveway;
+    totalCost -=tempCost;
+    totalCost += driveway; 
+    tempCost = driveway;
+
     document.getElementById("totalCost").innerHTML = totalCost;
-    document.getElementById("cart").innerHTML += "Cost of the driveway ($"+driveway+")<br><br>";
+
+    if(drivewayCart.length != 0 ){
+        document.getElementById("drivewayCart").innerHTML = "";
+    }
+
+    document.getElementById("drivewayCart").innerHTML += "Cost of the driveway ($"+driveway+")</h5>";
+    /*
+
+    if(){
+
+
+        totalCost += driveway;
+        document.getElementById("drivewayCart").innerHTML += "Cost of the driveway ($"+driveway+")</h5>";
+        flip=false;
+ 
+    }else{
+
+        totalCost -= tempCost;
+        totalCost += driveway;
+        document.getElementById("drivewayCart").remove();
+        document.getElementById("cart").innerHTML += "Cost of the driveway ($"+driveway+")";
+
+    }
+    tempCost = driveway;
+    document.getElementById("totalCost").innerHTML = totalCost; */
+
 }        
 function sidewalkCost() {
     var sidewalk = document.getElementById("sidewalk").value;
