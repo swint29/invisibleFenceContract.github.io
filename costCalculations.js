@@ -1,15 +1,17 @@
 var totalCost = 0;
-var tempCost = 0;
+var tempCost1 = 0;
+var tempCost2 = 0;
 
+//Don't think i need to keep calling totalCost element by ID
 function drivewayCost() {
     var driveway = document.getElementById("driveway").value;
-    var totCost = document.getElementById("totalCost").innerHTML;
+    var totalCost = document.getElementById("totalCost").innerHTML;
     var drivewayCart = document.getElementById("drivewayCart").innerHTML;
 
     driveway *= 3.5;
-    totalCost -=tempCost;
+    totalCost -=tempCost1;
     totalCost += driveway; 
-    tempCost = driveway;
+    tempCost1 = driveway;
 
     document.getElementById("totalCost").innerHTML = totalCost;
 
@@ -18,33 +20,26 @@ function drivewayCost() {
     }
 
     document.getElementById("drivewayCart").innerHTML += "Cost of the driveway ($"+driveway+")</h5>";
-    /*
-
-    if(){
-
-
-        totalCost += driveway;
-        document.getElementById("drivewayCart").innerHTML += "Cost of the driveway ($"+driveway+")</h5>";
-        flip=false;
- 
-    }else{
-
-        totalCost -= tempCost;
-        totalCost += driveway;
-        document.getElementById("drivewayCart").remove();
-        document.getElementById("cart").innerHTML += "Cost of the driveway ($"+driveway+")";
-
-    }
-    tempCost = driveway;
-    document.getElementById("totalCost").innerHTML = totalCost; */
-
+    
 }        
 function sidewalkCost() {
     var sidewalk = document.getElementById("sidewalk").value;
+    var totalCost = document.getElementById("totalCost").innerHTML;
+    var sidewalkCart = document.getElementById("sidewalkCart").innerHTML;
+
     sidewalk *= 25;
-    totalCost += sidewalk;
+    totalCost -=tempCost2;
+    totalCost += sidewalk; 
+    tempCost2 = sidewalk;
+
     document.getElementById("totalCost").innerHTML = totalCost;
-    document.getElementById("cart").innerHTML += "Cost of the sidewalk ($"+sidewalk+")<br><br>";
+
+    if(sidewalkCart.length != 0 ){
+        document.getElementById("sidewalkCart").innerHTML = "";
+    }
+
+    document.getElementById("sidewalkCart").innerHTML += "Cost of the driveway ($"+sidewalk+")</h5>";
+   
 }
 function diggingCost() {
     var dig = document.getElementById("dig").value;

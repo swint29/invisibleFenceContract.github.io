@@ -23,6 +23,16 @@ function sidewalkFunc() {
 
     swNumber.style.display = sidewalkCB.checked ? "block" : "none";
     sidewalk.style.display = sidewalkCB.checked ? "block" : "none";
+
+    if(!sidewalkCB.checked){
+
+        document.getElementById("sidewalkCart").innerHTML= "";
+        var totalCost = document.getElementById("totalCost").innerHTML;
+        var sidewalkCost = document.getElementById("sidewalk").value * 25;
+        totalCost -= sidewalkCost;
+        
+        document.getElementById("totalCost").innerHTML = totalCost;
+    }
 }
 function diggingFunc() {
     var diggingCB = document.getElementById("diggingCB");
