@@ -8,7 +8,7 @@ function drivewayFunc() {
 
     if(!drivewayCB.checked){
 
-        document.getElementById("drivewayCart").remove();
+        document.getElementById("drivewayCart").innerHTML= "";
         var totCost = document.getElementById("totalCost").innerHTML;
         var drivewayCost = document.getElementById("driveway").value * 3.5;
         totCost -= drivewayCost;
