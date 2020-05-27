@@ -7,3 +7,7 @@
     flex: 50%;
     padding: 10px;
 }
+p{
+    display: inline-block; /* show on the same line */
+    padding-right: 20px; /* small gap on the right of each header */
+}
