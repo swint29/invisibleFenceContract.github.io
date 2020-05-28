@@ -58,3 +58,25 @@ function pinnedWireFunc() {
     pinnedWireFeet.style.display = pinnedWireCB.checked ? "block" : "none";
     pinnedWire.style.display = pinnedWireCB.checked ? "block" : "none";
 }
+function toggle1(source) {
+    checkboxes = document.getElementsByName('pac1Box');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+      checkboxes[i].checked = source.checked;
+    }
+}
+function toggle2(source) {
+    checkboxes = document.getElementsByName('pac2Box');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+      checkboxes[i].checked = source.checked;
+    }
+}function toggle3(source) {
+    checkboxes = document.getElementsByName('pac3Box');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+      checkboxes[i].checked = source.checked;
+    }
+}function toggle4(source) {
+    checkboxes = document.getElementsByName('pac4Box');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+      checkboxes[i].checked = source.checked;
+    }
+}

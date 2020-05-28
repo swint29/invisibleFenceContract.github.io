@@ -6,9 +6,11 @@
 .column {
     flex: 50%;
     padding: 10px;
+    margin: 2%;
 }
 p{
     display: inline-block; /* show on the same line */
-    padding-left: 4%; /* small gap on the right of each header */
-    font-size: 10px;
+    padding-left: 5%; /* small gap on the right of each header */
+    font-size: 12px;
 }
+

@@ -20,10 +20,10 @@
 
         <h4 style="text-align: center; background-color: #0067b1; color: white; padding: 20px">Customer Information</h4>
 
-        <div style="margin-top: 5%; text-align: center;">
+        <div style="margin-top: 3%; text-align: center;">
             <div class="row">
                 <div class="col-sm-6"><p>Date: <input id="conDate"  type="date"></p></div>
-                <div class="col-sm-6"><p>Consultant: <input id="consultant" type="number"></p></div>
+                <div class="col-sm-6"><p>Consultant: <input id="consultant" type="text"></p></div>
             </div><hr>
             <div class="row">
                 <div class="col-sm-6"><p>Name: <input id="cusDame" type="text"></p></div>
@@ -50,7 +50,7 @@
                 <div class="col-sm-6"><p>Receiver 2: <input id="receiver2" type="number"></p></div>
             </div><hr>
         </div>
-        <div style="text-align: center; background-color: #0067b1; color: white; padding: 1px">
+        <div style="text-align: center; background-color: #0067b1; color: white; padding: 1px; width: 100%;">
             <h4>Choose A Package</h4>
             <h6>* Click on a feature to remove it from chosen package *</h6>
         </div>       
@@ -59,40 +59,40 @@
             <div class="row">
                 <div class="column">
                     <div style="margin:3%; border-radius: 10px; border:2px solid black">
-                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox">GPS Wire-Free Containment +- $3,499.00</h3><hr style="width: 90%;">
+                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox" style="margin-right: 5px;" onclick="toggle1(this)">GPS Wire-Free Containment +- $3,499.00</h3><hr style="width: 90%;">
                         <div class="row">
                             <div class="column">
-                                <input id="antenna" type="checkbox"> GPS 3.0 Control Panel with Antenna<br>
-                                <input id="gpsUnit" type="checkbox"> GPS 3.0 Mobile Collar Unit<br>
-                                <input id="proInstall" type="checkbox">Professional Installation<br>
-                                <input id="training" type="checkbox">Perfect Start Plus Training (3 Visits)<br>
-                                <input id="exZone" type="checkbox">One Optional Exclusion Zone<br>
+                                <input id="antenna" type="checkbox" name="pac1Box"> GPS 3.0 Control Panel with Antenna<br>
+                                <input id="gpsUnit" type="checkbox" name="pac1Box"> GPS 3.0 Mobile Collar Unit<br>
+                                <input id="proInstall" type="checkbox" name="pac1Box">Professional Installation<br>
+                                <input id="training" type="checkbox" name="pac1Box">Perfect Start Plus Training (3 Visits)<br>
+                                <input id="exZone" type="checkbox" name="pac1Box">One Optional Exclusion Zone<br>
                             </div>                            
                             <div class="column">
-                                <input id="batPacks" type="checkbox">Two Rechargeable Battery Packs<br>
-                                <input id="batUnits" type="checkbox">Battery Charging Unit<br>
-                                <input id="warrenty" type="checkbox">Two-Year Equipment Warrent*<br>
-                                <input id="guarantee" type="checkbox">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
+                                <input id="batPacks" type="checkbox" name="pac1Box">Two Rechargeable Battery Packs<br>
+                                <input id="batUnits" type="checkbox" name="pac1Box">Battery Charging Unit<br>
+                                <input id="warrenty" type="checkbox" name="pac1Box">Two-Year Equipment Warrent*<br>
+                                <input id="guarantee" type="checkbox" name="pac1Box">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
                             </div>
                         </div>
                     </div>
                     <div style="margin:3%; border-radius: 10px; border:2px solid black">
-                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox">Boundary Plus Ultimate Pet +- $2,699.00</h3><hr style="width: 90%;">
+                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox" style="margin-right: 5px;" onclick="toggle2(this)">Boundary Plus Ultimate Pet +- $2,699.00</h3><hr style="width: 90%;">
                         <div class="row">
                             <div class="column">
-                                <input id="antenna" type="checkbox"> Boundary Plus* Digital COntrol Panel<br>
-                                <input id="gpsUnit" type="checkbox"> MicroLite* Plus Computer Collar Unit<br>
-                                <input id="proInstall" type="checkbox">Containment Equipement Lifetime Warrenty*<br>
-                                <input id="training" type="checkbox">Professional Wire Installation (up to 2 acres)<br>
-                                <input id="training" type="checkbox">Total Surge & Lightning Protection<br>
-                                <input id="training" type="checkbox">Battery Backup System Installed<br>
-                                <input id="training" type="checkbox">16' Driveway Crossing<br>
-                                <input id="training" type="checkbox">Perfect Start Plus Training (6 Visits)<br>
+                                <input id="antenna" type="checkbox" name="pac2Box"> Boundary Plus* Digital COntrol Panel<br>
+                                <input id="gpsUnit" type="checkbox" name="pac2Box"> MicroLite* Plus Computer Collar Unit<br>
+                                <input id="proInstall" type="checkbox" name="pac2Box">Containment Equipement Lifetime Warrenty*<br>
+                                <input id="training" type="checkbox" name="pac2Box">Professional Wire Installation (up to 2 acres)<br>
+                                <input id="training" type="checkbox" name="pac2Box">Total Surge & Lightning Protection<br>
+                                <input id="training" type="checkbox" name="pac2Box">Battery Backup System Installed<br>
+                                <input id="training" type="checkbox" name="pac2Box">16' Driveway Crossing<br>
+                                <input id="training" type="checkbox" name="pac2Box">Perfect Start Plus Training (6 Visits)<br>
                             </div>                            
                             <div class="column">
-                                <input id="" type="checkbox">Two-Year Power Cap* Plan<br>
-                                <input id="guarantee2" type="checkbox">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
-                                <input id="" type="checkbox">One Indoor Shields* Plus<br>
+                                <input id="" type="checkbox" name="pac2Box">Two-Year Power Cap* Plan<br>
+                                <input id="guarantee2" type="checkbox" name="pac2Box">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
+                                <input id="" type="checkbox" name="pac2Box">One Indoor Shields* Plus<br>
                                 <h4>Choose 1:</h4>
                                 <div>
                                     <input id="" type="checkbox">MicroLite Plus Computer Collar Unit<br>                  
@@ -107,20 +107,20 @@
                 </div>
                 <div class="column">
                     <div style="margin:3%; border-radius: 10px; border:2px solid black">
-                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox">Boundary Plus Top Pet +- $2,299.00</h3><hr style="width: 90%;">
+                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox" style="margin-right: 5px;" onclick="toggle3(this)">Boundary Plus Top Pet +- $2,299.00</h3><hr style="width: 90%;">
                         <div class="row">
                             <div class="column">
-                                <input id="antenna" type="checkbox"> Boundary Plus* Digital COntrol Panel<br>
-                                <input id="gpsUnit" type="checkbox"> MicroLite* Plus Computer Collar Unit<br>
-                                <input id="proInstall" type="checkbox">Containment Equipement Lifetime Warrenty*<br>
-                                <input id="training" type="checkbox">Professional Wire Installation (up to 1/2 acre)<br>
-                                <input id="training" type="checkbox">Total Surge & Lightning Protection<br>
-                                <input id="training" type="checkbox">16' Driveway Crossing<br>
+                                <input id="antenna" type="checkbox" name="pac3Box">  Boundary Plus* Digital COntrol Panel<br>
+                                <input id="gpsUnit" type="checkbox" name="pac3Box"> MicroLite* Plus Computer Collar Unit<br>
+                                <input id="proInstall" type="checkbox" name="pac3Box">Containment Equipement Lifetime Warrenty*<br>
+                                <input id="training" type="checkbox" name="pac3Box">Professional Wire Installation (up to 1/2 acre)<br>
+                                <input id="training" type="checkbox" name="pac3Box">Total Surge & Lightning Protection<br>
+                                <input id="training" type="checkbox" name="pac3Box">16' Driveway Crossing<br>
                             </div>                            
                             <div class="column">
-                                <input id="" type="checkbox">Two-Year Power Cap* Plan<br>
-                                <input id="guarantee2" type="checkbox">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
-                                <input id="" type="checkbox">One Indoor Shields* Plus<br>
+                                <input id="" type="checkbox" name="pac3Box">Two-Year Power Cap* Plan<br>
+                                <input id="guarantee2" type="checkbox" name="pac3Box">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
+                                <input id="" type="checkbox" name="pac3Box">One Indoor Shields* Plus<br>
                                 <h4>Choose 1:</h4>
                                 <div>
                                     <input id="" type="checkbox">Battery Backup System Installed<br>                  
@@ -131,19 +131,19 @@
                         </div>
                     </div>
                     <div style="margin:3%; border-radius: 10px; border:2px solid black">
-                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox">Boundary Plus Super Pet +- $1,959.00</h3><hr style="width: 90%;">
+                        <h3 style="display: block; text-align: center;"><input id="antenna" type="checkbox" style="margin-right: 5px;" onclick="toggle4(this)">Boundary Plus Super Pet +- $1,959.00</h3><hr style="width: 90%;">
                         <div class="row">
                             <div class="column">
-                                <input id="antenna" type="checkbox"> Boundary Plus* Digital COntrol Panel<br>
-                                <input id="proInstall" type="checkbox">Professional Wire Installation<br>
-                                <input id="training" type="checkbox">Perfect Start Plus Training (3 Visits)<br>
-                                <input id="exZone" type="checkbox">One Optional Exclusion Zone<br>
+                                <input id="antenna" type="checkbox" name="pac4Box"> Boundary Plus* Digital Control Panel<br>
+                                <input id="proInstall" type="checkbox" name="pac4Box">Professional Wire Installation<br>
+                                <input id="training" type="checkbox" name="pac4Box">Perfect Start Plus Training (3 Visits)<br>
+                                <input id="exZone" type="checkbox" name="pac4Box">One Optional Exclusion Zone<br>
                             </div>                            
                             <div class="column">
-                                <input id="training" type="checkbox">Perfect Start Plus Training (3 Visits)<br>
-                                <input id="training" type="checkbox">One Year Power Cap Plan<br>
-                                <input id="guarantee" type="checkbox">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
-                                <input id="" type="checkbox">One Indoor Shields* Plus<br>
+                                <input id="training" type="checkbox" name="pac4Box">Perfect Start Plus Training (3 Visits)<br>
+                                <input id="training" type="checkbox" name="pac4Box">One Year Power Cap Plan<br>
+                                <input id="guarantee" type="checkbox" name="pac4Box">One Year, Money-Back, Pet Containment Perfomance Guarantee*<br>
+                                <input id="" type="checkbox" name="pac4Box">One Indoor Shields* Plus<br>
                             </div>
                         </div>
                     </div>
