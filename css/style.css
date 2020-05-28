@@ -9,6 +9,6 @@
 }
 p{
     display: inline-block; /* show on the same line */
-    padding-left: 20%; /* small gap on the right of each header */
+    padding-left: 4%; /* small gap on the right of each header */
     font-size: 10px;
 }
