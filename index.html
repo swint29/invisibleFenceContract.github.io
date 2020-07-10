@@ -156,22 +156,11 @@
             <h4>Choose Additional Features</h4>
             <h6>* Fill the necessary checkbox and fill in necessary information *</h6>
         </div>
-
-        <div class="row">
+        
+        <h2 style="text-align: center;">Wanted Features</h2>
+        <div class="row" style="margin-left: 15%; margin-right: 15%;">
             <div class="column">
-                <h2 style="text-align: center;">Wanted Features</h2>
-                <form style="text-align: center; align-content: center;">
-                    <input id="drivewayCB" type="checkbox" onclick="drivewayFunc()"> Driveway Crossings <br>
-                    <label id="drivewayFeet" style="display: none;"><br>Number of Feet</label><input onblur="drivewayCost()" id="driveway"type="number" style="margin: auto; display: none;"> <br>
-                    <input id="sidewalkCB" type="checkbox" onclick="sidewalkFunc()"> Sidewalk Crossings <br>
-                    <label id="swNumber" style="display: none;"><br>Number of Sidewalks</label><input onblur="sidewalkCost()" id="sidewalk" type="number" style="margin: auto; display: none;"> <br> 
-                    <input id="diggingCB" type="checkbox" onclick="diggingFunc()"> Hand Digging <br>
-                    <label id="diggingFeet" style="display: none;"><br>Number of Feet</label><input onblur="diggingCost()" id="dig" type="number" style="margin: auto; display: none;"> <br>
-                    <input id="wireCB" type="checkbox" onclick="wireFunc()"> Wire (Machine, Labor, Wire) <br>
-                    <label id="wireFeet" style="display: none;"><br>Number of Feet</label><input onblur="wireCost()" id="wire" type="number" style="margin: auto; display: none;"> <br>
-                    <input id="pinnedWireCB" type="checkbox" onclick="pinnedWireFunc()"> Pinned Wire Installed <br>
-                    <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input onblur="pinnedWireCost()" id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
-                    <input id="indoorSP"type="checkbox" onclick="indoorSPCost()"> Indoor Shields Plus <br>
+              <input id="indoorSP"type="checkbox" onclick="indoorSPCost()"> Indoor Shields Plus <br>
                     <input id="outdoorSP" type="checkbox" onclick="outdoorSPCost()"> Outdoor Shields Plus <br>
                     <input id="indoorSG" type="checkbox" onclick="indoorSGCost()"> Indoor Shields Gate <br>
                     <input id="microSU" type="checkbox" onclick="microSUCost()"> Micro Shields Unit <br>
@@ -186,25 +175,33 @@
                     <input id="winter" type="checkbox" onclick="winterCost()"> Winter Installation Fee <br>
                     <input id="doorman" type="checkbox" onclick="doormanCost()"> Doorman<br>
                     <input id="labor" type="checkbox" onclick="laborCost()"> Labor Add Ons<br>
-
-
-                </form>
             </div>
-            <div class="column" style="text-align: center;">
+            <div class="column">
                 <div style="display: inline-block">
-                    <h2 style="text-align: center;">Cart</h2>  
-                    <div id="cart">
-                        <div id="drivewayCart"></div>
-                        <div id="sidewalkCart"></div>
-
-                    </div>       
-                    <div style="padding: 100px; border: 2px solid #0067b1; text-align: center; ">
-                        <h4>Calculated Subtotal:</h4>
-                        <h2 id="totalCost">0</h2>
-                    </div>
+                    <input id="drivewayCB" type="checkbox" onclick="drivewayFunc()"> Driveway Crossings <br>
+                    <label id="drivewayFeet" style="display: none;"><br>Number of Feet</label><input onblur="drivewayCost()" id="driveway"type="number" style="margin: auto; display: none;"> <br>
+                    <input id="sidewalkCB" type="checkbox" onclick="sidewalkFunc()"> Sidewalk Crossings <br>
+                    <label id="swNumber" style="display: none;"><br>Number of Sidewalks</label><input onblur="sidewalkCost()" id="sidewalk" type="number" style="margin: auto; display: none;"> <br> 
+                    <input id="diggingCB" type="checkbox" onclick="diggingFunc()"> Hand Digging <br>
+                    <label id="diggingFeet" style="display: none;"><br>Number of Feet</label><input onblur="diggingCost()" id="dig" type="number" style="margin: auto; display: none;"> <br>
+                    <input id="wireCB" type="checkbox" onclick="wireFunc()"> Wire (Machine, Labor, Wire) <br>
+                    <label id="wireFeet" style="display: none;"><br>Number of Feet</label><input onblur="wireCost()" id="wire" type="number" style="margin: auto; display: none;"> <br>
+                    <input id="pinnedWireCB" type="checkbox" onclick="pinnedWireFunc()"> Pinned Wire Installed <br>
+                    <label id="pinnedWireFeet" style="display: none;"><br>Number of Feet</label><input onblur="pinnedWireCost()" id="pinnedWire" type="number" style="margin: auto; display: none;"> <br>
                 </div>
             </div>
             
+        </div>
+
+        <h2 style="text-align: center;">Cart</h2> <br> 
+        <div id="cart" style="text-align: center;">
+            <div id="drivewayCart"></div>
+            <div id="sidewalkCart"></div>
+
+        </div>       
+        <div style="padding: 10px; border: 2px solid #0067b1; text-align: center; ">
+            <h4>Calculated Subtotal:</h4>
+            <h2 id="totalCost">0</h2>
         </div>
 
         <footer style="background-color: #0067b1; padding: 5px; color: white; text-align: center;">
